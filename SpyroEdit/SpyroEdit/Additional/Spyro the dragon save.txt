@@ -1,0 +1,71 @@
+Spyro the Dragon (All versions)
+
+Level name		Gems		Dragons		Eggs
+Artisans Home		100		4		0
+Stone Hill		200		4		1
+Dark Hollow		100		3		0
+Town Square		200		4		1
+Toasty			100		1		0
+Sunny Flight		300		0		0
+Peace Keepers Home	200		3		1
+Dry Canyon		400		4		1
+Cliff Town		400		3		1
+Ice Cavern		400		5		0
+Doctor Shemp		300		1		0
+Night Flight		300		0		0
+Magic Crafters Home	300		3		2
+Alpine Ridge		500		4		1
+High Caves		500		3		2
+Wizard Peak		500		3		2
+BlowHard		400		1		0
+Crystal Flight		300		0		0
+Beast Makers Home	300		2		0
+Terrace Villiage	400		2		0
+Misty Bog		500		4		0
+Tree Tops		500		3		0
+MetalHead		500		1		0
+Wild Flight		300		0		0
+Dream Weavers Home	300		3		0
+Dark Passage		500		5		0
+Lofty Castle		400		3		0
+Haunted Towers		500		3		0
+Jaques			500		2		0
+Icy Flight		300		0		0
+Gnorc Gnexus		200		2		0
+Gnorc Cove		400		2		0
+Twilight Harbor		400		2		0
+Gnasty Gnorc		500		0		0
+Gnasty's Loot		2000		0		0
+
+Save structure information:
+Values are stored in the little endian byte order
+
+0x000 - 128 bytes (Save header)
+0x080 - 512 bytes (Save title + icon)
+0x280 - 1536 bytes (Slot 1)
+0x880 - 1536 bytes (Slot 2)
+0xE80 - 1536 bytes (Slot 3)
+
+Slot structure:
+0x280 - 8 bit (Start location. Read as decimal: World x 10 + Stage)
+0x281 - 8 bit (SFX volume) - Values range from 0 to 10
+0x282 - 8 bit (Music volume) - Values range from 0 to 10
+0x284 - 8 bit (Passive/Active flag) - Passive is 82 and Active is 2. Probably used for something else too
+0x288 - 8 bit (Stereo/Mono flag) - Stereo is 0 and Mono is 1
+0x28B - 8 bit (Lives) - Maximum is 255 but only 2 digits will be visible ingame
+0x2C0 - 8 bit (Unlocked level flags) - Values range from 0 to 1
+0x308 - 35 x 8 bit (Saved dragons)
+0x32C - 35 x 16 bit (Gems)
+0x374 - 16 x 8 bit (Eggs)
+0x38C - 32 x 8 bit (Flags for collected items)
+0x80C - 32 bit (Checksum) - Sum of all previous bytes from beginning of the slot
+
+Additional information:
+Each slot offsets by 0x600 from the previous one.
+
+Game progress percentage (120 % max):
+70% - Number of gems (14000 max)
+40% - Number of saved dragons (80 max)
+10% - Unknown
+
+Shendo 2010

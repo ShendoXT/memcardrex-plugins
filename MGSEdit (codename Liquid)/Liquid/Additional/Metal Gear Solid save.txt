@@ -1,0 +1,111 @@
+Metal Gear Solid info (US version)
+
+Weapon order:
+Socom
+FA-MAS
+Grenades
+Nikita
+Stinger
+Claymore
+C4
+Stun grenades
+Chaff grenades
+PSG-1
+
+Item order:
+Cigarettes
+Magnifying scope
+Cardboard box A
+Cardboard box B
+Cardboard box C
+Night-vision goggles
+Thermal goggles
+Gas mask
+Body armor
+Ketchup
+Stealth
+Bandana
+Camera
+Ration
+Cold medicine
+Diazepam
+PAL card key
+ID card
+Timer bomb
+Mine detector
+MO disc
+Rope
+Handkerchief
+Suppressor
+
+Location order:
+Dock
+Heliport
+Tank Hangar
+Cell
+Medi room
+Armory
+Armory Sth
+Canyon
+Nuke Bldg 1
+Nuke Bldg. B1
+Cmnder room
+Nuke Bldg. B2
+Lab
+Cave
+U.Grnd Pssge
+Comm Twr A
+Roof/Comm Twr
+Comm Twr B
+Twr Wall A
+Walkway
+Snowfield
+Blast Furnance
+Cargo Elev.
+Warehouse
+Warehouse Nth
+U.Grnd Base 1
+U.Grnd Base 2
+U.Grnd Base 3
+Cmnd room
+Spply Rte.
+Esc Route
+
+Save identifier:
+GHHMMCLI
+
+G - Magic letter (G - game, V - training data, C - photo)
+HH - Hours
+MM - Minutes (EZ starts with 0, NM with q)
+C - New or cleared game (Starts with @ - New game, H - Disc 2)
+L - Location (Starts with A - Dock)
+I - Identifier between similar saves (Starts with A)
+
+This is just for info when loading game. Identifier data is not used in game.
+
+Save structure information:
+Values are stored in the little endian byte order.
+
+0x0000 - 128 bytes (Save Header)
+0x0080 - 512 bytes (Save title + icon)
+0x0280 - 2560 bytes (Save data)
+0x0C80 - 2560 bytes (Save data mirror, not used when loading)
+0x1680 - 2560 bytes (Save data mirror, not used when loading)
+
+0x0184 - 32 bit (Checksum) - CRC32
+0x0190 - 32 bit (Game time) - Counted in frames (NTSC - 60 fps, PAL - 50 fps)
+0x01BC - 32 bit (Generic flags, unknown at this time)
+0x01C2 - 16 bit (Game difficulty) - 0-Easy, 1-Normal, 2-Hard, 3-Extreme
+0x01C4 - 16 bit (Option flags) - ????R??? ???????? - (When R is active radar is invisible)
+0x01D6 - 16 bit (Current health) - Anything above 1400 causes issues
+0x01D8 - 16 bit (Maximum health) - Anything above 1400 causes issues
+0x01E2 - 10 x 16 bit (Current weapon units) - If the value is positive weapon is in stock
+0x01F6 - 10 x 16 bit (Maximum weapon units)
+0x020A - 23 x 16 bit (Current item units) - If the value is greater then 0 item is in stock
+0x023A - 16 bit (Maximum Rations)
+0x023C - 16 bit (Maximum Cold medicines)
+0x023E - 16 bit (Maximum Diazepams)
+0x0270 - 8 bit (Number of saves)
+0x02DA - 8 bit (Torture flags) ????O??? - (When O is activated Meryl dies)
+
+Shendo 2011 - 2012

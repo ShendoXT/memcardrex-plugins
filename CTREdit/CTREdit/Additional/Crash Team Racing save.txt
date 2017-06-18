@@ -1,0 +1,231 @@
+ Crash Team Racing info (US version)
+
+Character indexes:
+0x0 - Crash Bandicoot
+0x1 - Dr. Neo Cortex
+0x2 - Tiny Tiger
+0x3 - Coco Bandicoot
+0x4 - N. Gin
+0x5 - Dingodile
+0x6 - Polar
+0x7 - Pura
+0x8 - Pinstripe
+0x9 - Papu Papu
+0xA - Ripper Roo
+0xB - Komodo Joe
+0xC - Dr. N. Tropy
+0xD - Penta Penguin
+0xE - Fake Crash
+0xF - Nitrous Oxide (game locks up)
+
+Unsupported indexes (0xF and up) lead to game crashing.
+If the index is 0xFFFF save is not active.
+
+Save structure information:
+Values are stored in the little endian byte order.
+
+0x0000 - 128 bytes (Save Header)
+0x0080 - 256 bytes (Save title + icon)
+0x0180 - 80 bytes (1st save slot)
+0x01D0 - 80 bytes (2nd save slot)
+0x0220 - 80 bytes (3rd save slot)
+0x0270 - 80 bytes (4th save slot)
+
+0x0184 - 8 bit (Colectables flags 1)
+	bit 1 - Unknown
+	bit 2 - Unknown
+	bit 3 - Unknown
+	bit 4 - Unknown
+	bit 5 - Unknown
+	bit 6 - Unknown
+	bit 7 - Dingo Canyon (trophy)
+	bit 8 - Dragon Mines (trophy)
+
+0x0185 - 8 bit (Colectables flags 2)
+	bit 1 - Blizzard Bluff (trophy)
+	bit 2 - Crash Cove (trophy)
+	bit 3 - Tiger Temple (trophy)
+	bit 4 - Papu's Pyramid (trophy)
+	bit 5 - Roo's Tubes (trophy)
+	bit 6 - Hot Air Skyway (trophy)
+	bit 7 - Sewer Speedway (trophy)
+	bit 8 - Mystery Caves (trophy)
+
+0x0186 - 8 bit (Colectables flags 3)
+	bit 1 - Cortex Castle (trophy)
+	bit 2 - N. Gin Labs (trophy)
+	bit 3 - Polar Pass (trophy)
+	bit 4 - Oxide Station (trophy)
+	bit 5 - Coco Park (trophy)
+	bit 6 - Tiny Arena (trophy)
+	bit 7 - Dingo Canyon (blue relic)
+	bit 8 - Dragon Mines (blue relic)
+
+0x0187 - 8 bit (Colectables flags 4)
+	bit 1 - Blizzard Bluff (blue relic)
+	bit 2 - Crash Cove (blue relic)
+	bit 3 - Tiger Temple (blue relic)
+	bit 4 - Papu's Pyramid (blue relic)
+	bit 5 - Roo's Tubes (blue relic)
+	bit 6 - Hot Air Skyway (blue relic)
+	bit 7 - Sewer Speedway (blue relic)
+	bit 8 - Mystery Caves (blue relic)
+
+0x0188 - 8 bit (Colectables flags 5)
+	bit 1 - Cortex Castle (blue relic)
+	bit 2 - N. Gin Labs (blue relic)
+	bit 3 - Polar Pass (blue relic)
+	bit 4 - Oxide Station (blue relic)
+	bit 5 - Coco Park (blue relic)
+	bit 6 - Tiny Arena (blue relic)
+	bit 7 - Slide Coliseum (blue relic)
+	bit 8 - Turbo Track (blue relic)
+
+0x0189 - 8 bit (Colectables flags 6)
+	bit 1 - Dingo Canyon (gold relic)
+	bit 2 - Dragon Mines (gold relic)
+	bit 3 - Blizzard Bluff (gold relic)
+	bit 4 - Crash Cove (gold relic)
+	bit 5 - Tiger Temple (gold relic)
+	bit 6 - Papu's Pyramid (gold relic)
+	bit 7 - Roo's Tubes (gold relic)
+	bit 8 - Hot Air Skyway (gold relic)
+
+0x018A - 8 bit (Colectables flags 7)
+	bit 1 - Sewer Speedway (gold relic)
+	bit 2 - Mystery Caves (gold relic)
+	bit 3 - Cortex Castle (gold relic)
+	bit 4 - N. Gin Labs (gold relic)
+	bit 5 - Polar Pass (gold relic)
+	bit 6 - Oxide Station (gold relic)
+	bit 7 - Coco Park (gold relic)
+	bit 8 - Tiny Arena (gold relic)
+
+0x018B - 8 bit (Colectables flags 8)
+	bit 1 - Slide Coliseum (gold relic)
+	bit 2 - Turbo Track (gold relic)
+	bit 3 - Dingo Canyon (platinum relic)
+	bit 4 - Dragon Mines (platinum relic)
+	bit 5 - Blizzard Bluff (platinum relic)
+	bit 6 - Crash Cove (platinum relic)
+	bit 7 - Tiger Temple (platinum relic)
+	bit 8 - Papu's Pyramid (platinum relic)
+
+0x018C - 8 bit (Colectables flags 9)
+	bit 1 - Roo's Tubes (platinum relic)
+	bit 2 - Hot Air Skyway (platinum relic)
+	bit 3 - Sewer Speedway (platinum relic)
+	bit 4 - Mystery Caves (platinum relic)
+	bit 5 - Cortex Castle (platinum relic)
+	bit 6 - N. Gin Labs (platinum relic)
+	bit 7 - Polar Pass (platinum relic)
+	bit 8 - Oxide Station (platinum relic)
+
+0x018D - 8 bit (Colectables flags 10)
+	bit 1 - Coco Park (platinum relic)
+	bit 2 - Tiny Arena (platinum relic)
+	bit 3 - Slide Coliseum (platinum relic)
+	bit 4 - Turbo Track (platinum relic)
+	bit 5 - Dingo Canyon (CTR token)
+	bit 6 - Dragon Mines (CTR token)
+	bit 7 - Blizzard Bluff (CTR token)
+	bit 8 - Crash Cove (CTR token)
+
+0x018E - 8 bit (Colectables flags 11)
+	bit 1 - Tiger Temple (CTR token)
+	bit 2 - Papu's Pyramid (CTR token)
+	bit 3 - Roo's Tubes (CTR token)
+	bit 4 - Hot Air Skyway (CTR token)
+	bit 5 - Sewer Speedway (CTR token)
+	bit 6 - Mystery Caves (CTR token)
+	bit 7 - Cortex Castle (CTR token)
+	bit 8 - N. Gin Labs (CTR token)
+
+0x018F - 8 bit (Colectables flags 12)
+	bit 1 - Polar Pass (CTR token)
+	bit 2 - Oxide Station (CTR token)
+	bit 3 - Coco Park (CTR token)
+	bit 4 - Tiny Arena (CTR token)
+	bit 5 - Unknown
+	bit 6 - Unknown
+	bit 7 - Ripper Roo (boss)
+	bit 8 - Papu Papu (boss)
+
+0x019C - 9 bytes (User name, standard ASCII, 8 letters + null char)
+0x01AE - 16 bit (Game character)
+
+0x02C8 - 8 bit (Character unlockables 1)
+	bit 1 - Unknown
+	bit 2 - Unknown
+	bit 3 - Parking Lot (Battle arena)
+	bit 4 - The North Bowl (Battle arena)
+	bit 5 - Lab Basement (Battle arena)
+	bit 6 - Dr. N. Tropy
+	bit 7 - Penta Penguin
+	bit 8 - Ripper Roo
+
+0x02C9 - 8 bit (Character unlockables 2)
+	bit 1 - Papu Papu
+	bit 2 - Komodo Joe
+	bit 3 - Pinstripe
+	bit 4 - Fake Crash
+	bit 5 - Unknown
+	bit 6 - Unknown
+	bit 7 - Unknown
+	bit 8 - Unknown
+
+0x02CC - 8 bit (General unlockables)
+	bit 1 - Unknown
+	bit 2 - Unknown
+	bit 3 - Unknown
+	bit 4 - Unknown
+	bit 5 - Scrapbook mode
+	bit 6 - Unknown
+	bit 7 - Unknown
+	bit 8 - Unknown
+
+0x17FE - 16 bit (Checksum, big endian)
+
+Checksum calculation:
+
+private uint GetChecksumCTR(byte[] InputData)
+{
+	//Simulated PS1 registers
+	uint r2 = 0;
+	uint r3 = 0;
+	uint r4 = 0;
+	uint r5 = 0;
+	uint r6 = 0;
+	uint r7 = 0;
+
+	//Checksum calculation
+	for (uint i = 0; i < 5760; i++)
+	{
+		r5 = InputData[i + 0x180];
+		r3 = 0x7;
+		r7 = 0x10000;
+		r6 = r7;
+		r6 = r6 | 0x1021;
+
+		//Erase old checksum
+		InputData[0x17FE] = 0x00;
+		InputData[0x17FF] = 0x00;
+
+		while (r3 < 0xFFFF)
+		{
+			r4 = r4 << 0x1;
+			r2 = r5 >> (int)r3;
+			r2 = r2 & 0x1;
+			r4 = r4 | r2;
+			r2 = r4 & r7;
+
+			if (r2 != 0) r4 = r4 ^ r6;
+
+			r3 = (r3 + 0xFFFF) & 0xFFFF;
+		}
+	}
+
+	return r4;
+}
+
+Shendo 2013.
